@@ -8,6 +8,7 @@
 </template>
 
 <script>
+	import http from '../../api/home'
 	export default {
 		data() {
 			return {
@@ -15,7 +16,9 @@
 			}
 		},
 		onLoad() {
-
+			http.getData({t:1}).then(res=>{
+				console.log("ttt",res);
+			});
 		},
 		methods: {
 
